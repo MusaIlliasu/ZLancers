@@ -1,5 +1,10 @@
+import { useState } from "react";
+// Style
 import "./App.css";
+
 function App() {
+  const [selection, setSelection] = useState("");
+
   return (
     <div className="main">
       <div className="left">
@@ -45,19 +50,25 @@ function App() {
           </div>
           <p>Looking for </p>
           <div className="looking__for">
-            <div className="label__container">
+            <div className={`label__container ${selection === "projects" ? 'border' : ''}`}>
               <input
                 type="radio"
                 name="projects"
-                value="Projects"
+                value="projects"
                 id="projects"
+                onChange={(ev) => setSelection(ev.target.value)}
               />
               <label className="projects" htmlFor="projects">
                 Projects
               </label>
             </div>
-            <div className="label__container">
-              <input type="radio" name="projects" value="Design" id="design" />
+            <div className={`label__container ${selection === "design" ? 'border' : ''}`}>
+              <input type="radio" 
+                name="projects" 
+                value="design" 
+                id="design" 
+                onChange={(ev) => setSelection(ev.target.value)} 
+              />
               <label htmlFor="design">Design</label>
             </div>
           </div>
