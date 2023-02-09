@@ -1,42 +1,183 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap");
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(230, 243, 255);
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
 }
-
+.main {
+  width: auto;
+  display: flex;
+  gap: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 1024px;
+}
+p {
+  color: #fefefe;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  margin: 8px;
+  padding: 32px 24px;
+  width: 40%;
+  height: 100%;
+  background-color: #2520e3;
+}
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  font-weight: 500;
+  margin-bottom: 4.8rem;
+  color: #fefefe;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.hero__title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: normal;
+  color: #fefefe;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.subtitle {
+  margin-bottom: 6rem;
+  color: #d7dde6;
+}
+.testimonial__card {
+  display: flex;
+  flex-direction: column;
+  background-color: #1c17b2;
+  padding: 16px;
+  border-radius: 8px;
+  color: #fefefe;
+  font-size: 14px;
+}
+img {
+  width: 64px;
+  border-radius: 8px;
+  height: auto;
+}
+.author {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+.name {
+  font-size: 16px;
+  font-weight: 500;
+}
+.dots {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  gap: 8px;
+}
+.dot {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  color: white;
+  height: 8px;
+  width: 8px;
+}
+.dot__active {
+  background-color: #fefefe;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.right {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  margin: 8px;
+  padding: 64px 24px;
+  /* width: 60%; */
+  height: 100%;
+  color: rgb(79, 79, 79);
+}
+.signup__container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.signup {
+  font-size: 32px;
+  font-weight: 700;
+}
+form p {
+  color: #2f2f2f;
+}
+form ::placeholder {
+  opacity: 0.75;
+}
+label {
+  color: rgba(47, 47, 47, 0.5);
+}
+.looking__for {
+  display: flex;
+  gap: 16px;
+}
+.label__container {
+  display: flex;
+  width: 196px;
+  border: 1px solid #dbdafd;
+  padding: 8px 16px;
+  gap: 8px;
+  border-radius: 8px;
+}
+input[type="radio"] {
+  accent-color: #2520e3;
+}
+.looking__for input[type="radio"]:checked + label {
+  color: #2520e3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.email__container input,
+.skills__container input,
+.password__container input {
+  display: flex;
+  display: block;
+  padding: 8px;
+  border: 1px solid #dbdafd;
+  width: 80%;
+  border-radius: 8px;
+}
+.email__container,
+.skills__container,
+.password__container {
+  margin-top: 1rem;
 }
 
-.card {
-  padding: 2em;
+.skills__tag {
+  display: flex;
+  gap: 0.8rem;
 }
-
-.read-the-docs {
-  color: #888;
+.branding,
+.illustration {
+  margin: 0.2rem 0 0.5rem;
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background-color: rgba(230, 243, 255, 0.5);
+}
+form button {
+  /* margin-top: 2rem; */
+  margin-top: 32px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  background-color: #1c17b2;
+  color: #fff;
+  font-weight: 500;
+}
+span {
+  color: rgb(146, 162, 177);
+  cursor: pointer;
+}
+.login {
+  color: #1c17b2;
+  font-weight: 500;
 }
